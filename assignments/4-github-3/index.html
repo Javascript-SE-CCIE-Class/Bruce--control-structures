@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Assignments in 3<sup>rd</sup> Github link</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <title>Assignments in 3<sup>rd</sup> Github link</title>
+    </head>
 
-<body>
-    <a href="http://github.com/NdauwaRafael/javascriptPracticeLesson/blob/lesson-4-arrays/arrays_assignment.md" target="_blank"
-        title="3rd Github Link">Find Assignments Here</a>
-    <br />
-    <label for="mark">Mark : </label>
-    <input type="text" name="mark" id="mark" disabled>
-    <label for="mark">Grade : </label>
-    <input type="text" id="grade" disabled>
-    <button onclick="getGrade()">Run Test</button>
-    <script src="github3.js"></script>
-</body>
+    <body>
+
+
+
+        <form class=" col-sm-6">
+            <a href="http://github.com/NdauwaRafael/javascriptPracticeLesson/blob/lesson-4-arrays/arrays_assignment.md"
+                target="_blank" title="3rd Github Link">Find Assignments Here</a>
+            <hr>
+            <div class="form-group">
+                <label for="testing">Choose Test</label>
+                <select id="testing" onchange="setTest()" class="form-control">
+                    <option selected disabled>Choose...</option>
+                    <option value="marks">Marks(Number 1)</option>
+                    <option value="number">Number-Word(Number 2)</option>
+                    <option value="math">Math-of-20(Number 12)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p id="desc"></p>
+                <label for="value">Value</label>
+                <input type="number" class="form-control" id="value" placeholder="Enter Value">
+            </div>
+            <div class="form-group">
+                <label for="answer">Answer</label>
+                <input type="text" class="form-control" id="answer" disabled>
+            </div>
+            
+            <button class="btn btn-primary" type="reset" onclick="resetForm()">Reset</button>
+            <button type="button" name="sub" id="sub" class="btn btn-primary">Run Test</button>
+        </form>
+
+        <script src="github3.js"></script>
+    </body>
 
 </html>
